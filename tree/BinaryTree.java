@@ -59,5 +59,19 @@ private Node root;
 //        display(node.right + str + "\t");
     }
 
+    public void preorder(){
+        preorder(root);
+    }
+
+    private void preorder(Node node){
+        if(node == null){
+            return;
+        }
+        System.out.println(node.value + " ");
+        preorder(node.left);
+        preorder(node.right);
+
+    }
+
 
 }
