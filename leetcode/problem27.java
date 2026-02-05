@@ -1,5 +1,5 @@
 package leetcode;
-
+//remove elements
 class problem27 {
     public int removeElement(int[] nums, int val) {
 
@@ -16,8 +16,5 @@ class problem27 {
             }
         }
         return k;
-
-
-        return 0;
     }
 }
