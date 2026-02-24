@@ -2,21 +2,21 @@ package Stacks_Queue;
 
 public class customStack {
     protected int[] data;
-    private static final int default_size = 10;
+    private static final int DEFAULT_SIZE = 10;
 
     int ptr = -1;
 
     public customStack(){
-        this(default_size);
+        this(DEFAULT_SIZE);
     }
 
-    public customStack(int size){
+    public customStack(int size) {
         this.data = new int[size];
     }
 
     public boolean push(int item){
 
-        if(isfull()){
+        if(isFull()){
             System.out.println("Stack is full");
             return false;
         }
@@ -24,33 +24,31 @@ public class customStack {
         ptr++;
         data[ptr] = item;
         return true;
-
-    }
-
-    public int peek() throws stackException {
-        if(isempty()){
-            throw new stackException("Cannot peek from an empty stack");
-        }
-        return data[ptr];
     }
 
     public int pop() throws Exception {
-        if(isempty()){
-            throw new Exception("Cannot pop from an empty stack!");
+        if(isEmpty()){
+            throw new Exception("Cannot pop from an Empty Stack");
         }
 //        int removed = data[ptr];
 //        ptr--;
 //        return removed;
         return data[ptr--];
-
     }
 
-    public boolean isfull(){
+    public int peek() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Cannot peek from empty stack");
+        }
+        return data[ptr];
+    }
+
+      public boolean isFull(){
         return ptr == data.length - 1;
-    }
+      }
 
-    public boolean isempty(){
+      public boolean isEmpty(){
         return ptr == -1;
-    }
+      }
 
 }
