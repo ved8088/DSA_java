@@ -25,7 +25,6 @@ public class customStack {
         data[ptr] = item;
         return true;
     }
-
     public int pop() throws Exception {
         if(isEmpty()){
             throw new Exception("Cannot pop from an Empty Stack");
@@ -45,6 +44,8 @@ public class customStack {
 
       public boolean isFull(){
         return ptr == data.length - 1;
+
+
       }
 
       public boolean isEmpty(){

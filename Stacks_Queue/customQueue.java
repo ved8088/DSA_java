@@ -7,7 +7,26 @@ public class customQueue {
 
     int end = -1;
 
+    public customQueue(){
+        this(DEFAULT_SIZE);
+    }
 
+    public customQueue(int size) {
+        this.data = new int[size];
+    }
+
+    public boolean isFull(){
+        return end == data.length - 1;
+    }
+
+    public boolean isEmpty(){
+        return end == -1;
+    }
+
+    public boolean insert(int item){
+//        end++;
+//        data[end] = item;
+//        return true;
 
         if(isFull()){
             return false;
@@ -30,6 +49,21 @@ public class customQueue {
         }
         end--;
         return removed;
+    }
+
+    public int front() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Queue is empty");
+        }
+        return data[0];
+    }
+
+    public void display(){
+        for(int i=0;i<end;i++){
+            System.out.print(data[i]+" ");
+        }
+        System.out.println("END");
+
     }
 
 }
