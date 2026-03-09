@@ -74,7 +74,7 @@ class QueueUsingStackRemoveEfficient {
     }
 
     public int remove() throws Exception{
-
+        return 0;
 
     }
 
