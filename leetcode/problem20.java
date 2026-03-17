@@ -1,6 +1,6 @@
 package leetcode;
 import java.util.Stack;
-
+// done by stack
 
 public class problem20 {
 
